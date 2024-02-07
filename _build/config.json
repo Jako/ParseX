@@ -1,0 +1,111 @@
+{
+  "name": "ParseX",
+  "lowCaseName": "parsex",
+  "description": "Read and Parse XML Input",
+  "author": "Guido Gallenkamp, Thomas Jakobi",
+  "version": "2.1.0",
+  "package": {
+    "elements": {
+      "snippets": [
+        {
+          "name": "ParseX",
+          "file": "parsex.snippet.php",
+          "properties": [
+            {
+              "name": "source",
+              "options": ""
+            },
+            {
+              "name": "elements",
+              "value": ""
+            },
+            {
+              "name": "tpl",
+              "value": ""
+            },
+            {
+              "name": "wrapper",
+              "value": ""
+            },
+            {
+              "name": "outputSeparator",
+              "value": ""
+            },
+            {
+              "name": "limit",
+              "value": ""
+            },
+            {
+              "name": "debugmode",
+              "type": "combo-boolean",
+              "value": ""
+            },
+            {
+              "name": "cacheData",
+              "value": ""
+            },
+            {
+              "name": "filter",
+              "value": ""
+            },
+            {
+              "name": "sortby",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "ParseXFilter",
+          "file": "parsexfilter.snippet.php",
+          "properties": [
+            {
+              "name": "where",
+              "options": ""
+            },
+            {
+              "name": "params",
+              "value": ""
+            }
+          ]
+        }
+      ],
+      "chunks": [
+        {
+          "name": "fetchRevo",
+          "file": "fetchrevo.chunk.html"
+        },
+        {
+          "name": "parsexTpl",
+          "file": "parsextpl.chunk.html"
+        },
+        {
+          "name": "parsexWrapTpl",
+          "file": "parsexwraptpl.chunk.html"
+        }
+      ]
+    }
+  },
+  "dependencies": [
+    {
+      "name": "php",
+      "version": ">=5.6"
+    },
+    {
+      "name": "modx",
+      "version": ">=2.6"
+    }
+  ],
+  "build": {
+    "readme": "docs/readme.md",
+    "license": "docs/license.md",
+    "changelog": "docs/changelog.md",
+    "setupOptions": {
+      "source": "setup.options.php"
+    },
+    "resolver": {
+      "after": [
+        "resolve.treehillstudio.php"
+      ]
+    }
+  }
+}
