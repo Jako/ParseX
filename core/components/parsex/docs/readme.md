@@ -13,7 +13,7 @@ results or any nested XML format.
 
 ## Usage
 
-```
+```html
 [[!ParseX?
 &source=`https://modx.com/feeds/latest.rss`
 &tpl=`xmlTpl`
@@ -47,7 +47,7 @@ The following snippet properties are available:
 The filter property could be filled with a JSON encoded array of filters similar
 to xPDO where clauses:
 
-```
+```html
 &filter=`{"requestparam:operator":"value"}`
 ```
 
@@ -69,13 +69,13 @@ The following snippet properties are available in this snippet:
 
 Example:
 
-```
+```html
 &filter=`[[!ParseXFilter? &params=`requestparam:<>:prefix.:.suffix`]]`
 ```
 
 will be translated to
 
-```
+```html
 &filter=`{"prefix.requestparam.suffix:<>":"value"}`
 ```
 
